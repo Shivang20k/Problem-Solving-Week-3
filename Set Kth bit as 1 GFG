@@ -1,0 +1,17 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <math.h>
+using namespace std;
+
+int setbit(int x, int k)
+{
+	int mask = 1<<k;
+	int result = x | mask;
+	return result;
+}
+
+int main() {
+  int n  = 34 ;
+  cout<< setbit(n , 2);
+  
+}
