@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+ 
+int main() {
+  int n  =5;
+  int i, sum =0;
+  while (n>0){
+    int rem = (n&1);
+	
+    sum = sum + (pow(10,i++)* rem);
+	
+    n=n>>1;
+	
+  }
+  cout<< sum;
+}
