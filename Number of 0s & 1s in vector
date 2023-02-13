@@ -1,0 +1,24 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <math.h>
+#include<vector> 
+using namespace std;
+
+void Countzeroone(vector<int> arr)
+{
+	int zeroCounter= 0, oneCounter = 0;
+	for(int i= 0; i<arr.size(); i++)
+	{
+		if(arr[i] == 0)
+			zeroCounter+=1;
+		else
+			oneCounter+=1;
+	}
+	cout<<"Number of Ones are "<<oneCounter<<endl<<"Number of Zeros are "<<zeroCounter;
+}
+
+int main() {
+  vector<int> arr = {0 ,1, 1 ,1, 0, 1, 0, 0, 0};
+  Countzeroone(arr);
+  cout<<"done";
+}
