@@ -1,0 +1,30 @@
+// this code gives basics of extremes
+
+#include <iostream>
+#include <bits/stdc++.h>
+#include <math.h>
+#include<vector> 
+using namespace std;
+
+void PrintExtremes(vector<int> arr, int size)
+{
+	//2 pointer approach
+	int start = 0;
+	int end = size - 1;
+	while(start <= end)
+	{
+		if(start == end)
+			cout<<arr[start];
+		else
+			cout<<arr[start]<<" "<<arr[end]<<endl;
+		
+		start++;
+		end--;
+	}
+}
+
+int main() {
+  vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  PrintExtremes(arr, arr.size());
+  cout<<endl<<"done";
+}
