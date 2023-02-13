@@ -15,4 +15,10 @@
   {
 	  cout<<arr[i]<<endl;
   }
+  
+  
+  
+  //create intiliazed vecot
+  vector<int> arr3 = {size, value_to_set} eg(4,-1)
+   eg) [-1, -1, -1, -1]
   }
