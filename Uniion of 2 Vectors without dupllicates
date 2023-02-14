@@ -1,0 +1,35 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <math.h>
+#include<vector> 
+using namespace std;
+
+
+void UniqueElement(vector<int> arr, vector<int> arr2)
+{
+	//Union of 2 vectors
+	vector<int> result;
+	for(int i=0; i<arr.size(); i++ )
+	{
+		for( int j =0; j<arr2.size() ;j++)
+		{
+			if(arr[i]==arr2[j])
+				arr2[j]=INT_MIN;   //marking common value as INT_MIN to avoid duplicates
+		}
+		result.push_back(arr[i]);
+	}
+	for( int j =0; j<arr2.size();j++)
+	{
+			if(INT_MIN!=arr2[j])
+				result.push_back(arr2[j]);
+	}
+	for(auto val:result)
+		cout<<val<<" ";
+}
+
+int main() {
+  vector<int> arr = {1, 2, 3, 4, 5};
+  vector<int> arr2 = {5, 6, 7, 4};
+  UniqueElement(arr, arr2);
+  cout<<endl<<"done";
+}
