@@ -1,0 +1,33 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <math.h>
+#include<vector> 
+using namespace std;
+
+
+void RowWiseSum(vector<vector<int>> arr, int ele)
+{
+	int max = INT_MAX;
+	int min = INT_MIN;
+	for(int i =0; i< arr.size();i++)
+	{
+		for( int j=0; j<arr[0].size(); j++)
+		{
+			if(arr[i][j]>min){
+				min = arr[i][j];
+			 }	
+			if(arr[i][j]<max){
+				max = arr[i][j];
+			}
+		} 
+	}
+	cout<<"Minimum is "<<min<<endl<<"Maximum is "<<max;
+}
+
+int main() {
+  int row =3;
+  int col =4; 
+  vector<vector<int>> arr = {{1,2,3,-1}, {4,5,6,1}, {7,8,19,1}};
+  RowWiseSum(arr,29);
+  cout<<endl<<"done";
+}
