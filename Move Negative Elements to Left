@@ -1,0 +1,23 @@
+void moveNegToLeft(vector<int> arr){
+	// 2 pointer approach
+	int start = 0;
+	int end = arr.size() - 1 ;
+	while (start < end){
+		if (arr[start] < 0)
+			start++;
+		else if( arr[end] > 0)
+			end--;
+		else // i.e. either start is +ve or end is -ve
+			swap( arr[start] , arr[end]);
+	}
+	
+	for(auto val : arr)
+		cout << val <<" ";
+	
+}
+
+int main() {
+  vector<int> arr = {1, -8, 9, -7 ,-1 , 8 , 3, -9};
+  moveNegToLeft(arr);
+  cout<<endl<<"done";
+}
