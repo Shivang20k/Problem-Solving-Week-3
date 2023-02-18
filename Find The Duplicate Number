@@ -1,5 +1,5 @@
 int findTheDuplicateNumber(vector<int> arr){
-	// visited / marking approach
+	// visited / marking approach LEETCODE
 	
 	vector<bool> visited (arr.size() , false);
 	for ( int i=0 ; i<arr.size(); i++)
@@ -10,6 +10,17 @@ int findTheDuplicateNumber(vector<int> arr){
 		}
 		visited[val] = true;
 	}	
+}
+
+
+int findTheDuplicateNumber2(vector<int> arr){
+	// positioning method , puuting same element at same index i.e. 
+	//3 at 3 index , if 3 already at ts position the it is duplicate
+	
+	while(arr[0] != arr[arr[0]]{
+		swap(arr[0], arr[arr[0]]);
+	}	
+	return arr[0];
 }
 
 int main() {
