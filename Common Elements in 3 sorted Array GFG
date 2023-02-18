@@ -1,0 +1,32 @@
+void commonElements(vector<int> arr1, vector<int> arr2, vector<int> arr3){
+	// shifting 3 pointers
+	int i , j , k;
+	i=j=k=0;
+	set<int> ans;
+	while( i<arr1.size() && j<arr2.size() && k<arr3.size())
+	{
+		if(arr1[i] == arr2[j] && arr2[j] == arr3[k])
+		{
+			ans.insert(arr1[i]);
+			i++;
+			j++;
+			k++;
+		}
+		else if(arr1[i] < arr2[j])
+			i++;
+		else if(arr2[j] < arr3[k])
+			j++;
+		else
+			k++;
+	}
+	for(auto val:ans)
+		cout<<val<<" ";
+}
+
+int main() {
+  vector<int> arr1 = {1,2,3,4,5};
+  vector<int> arr2 = {1,3,7,8,9};
+  vector<int> arr3 = {1,2,3,6,8};
+  commonElements(arr1, arr2, arr3);
+  cout<<endl<<"done";
+}
