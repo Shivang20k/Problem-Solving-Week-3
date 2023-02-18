@@ -1,1 +1,18 @@
+void findMissingNumbers(vector<int> arr){
+	// visited / marking approach
+	
+	vector<bool> visited (arr.size() , false);
+	for ( int i=0 ; i<arr.size(); i++)
+	{
+		visited[arr[i] - 1] = true;  // marking idx of visited as true
+	}	
+	for(int idx = 0 ; idx < visited.size(); idx++)
+		if(visited[idx] == false)
+			cout<< idx+1 << " ";
+}
 
+int main() {
+  vector<int> arr = {1,2,5,4,5,5};
+  findMissingNumbers(arr);
+  cout<<endl<<"done";
+}
